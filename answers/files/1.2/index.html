@@ -3,17 +3,13 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    let num = 25;
-     if (typeof(num) !== 'number') {
-       console.log(`${num} не число, а нужно число!`)
-     } else if (num === 105) {
-       console.log(`${num} Бинго! угадал в исключение!`)
-     } else if ((num > 100) || (num < 1) || (num === 3) || (num === 7) || (num === 8 ) || (num === 9) || (num === 22) || (num === 23) || (num === 24) || (num === 25)){
-     console.log(`${num} - блин! попали в выборку`);
-     } else {
-       console.log(`${num} - дышите глубже! - Все нормально!`);
-     }
-
+  const a = '';
+  const b = 'Yes!';
+  const c = null;
+  const d = '';
+  let message;
+  message = a || b || b || c || null;
+  console.log(message);
   </script>
   </body>
 </html>
