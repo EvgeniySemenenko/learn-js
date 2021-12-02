@@ -1,18 +1,16 @@
 <!DOCTYPE HTML>
 <html>
+<meta charset="UTF-8">
   <body>
   <script>
-    // let transport = 'bicycle';
-    let transport = '';
-    // let transport = 'motorcycle';
-    // let transport = 'car';
-    if ((transport === 'bicycle') || (transport === 'motorcycle'))
-    {console.log('2 wheels');}
-     else if (transport === 'car')
-    {console.log('4 wheels');}
-     else console.log('Pepelatc');
-    // const message = `Hello World`; //есть два варианта решения данной проблемы: либо как сделано в ответе, либо
-  // alert(message);// оборачиваем аргумент message в кавычки: alert('message'); - проблема с ошибкой решена, а что конкретно необходимо было отобразить не оговаривалось отдельно
+     let typeLetter = prompt('Буковку, пожалуйста', []);
+    if ((typeLetter >= 'A') & (typeLetter <= 'Z')) {
+      console.log(`${typeLetter} - Это латинская заглавная буква!`);
+    } else if ((typeLetter >= 'a') & (typeLetter <= 'z')) {
+      console.log(`${typeLetter} - Это латинская строчная буква!`);
+    } else {
+      console.log(`${typeLetter} что-то не то, попробуйте еще разок;-)`);
+    }
   </script>
   </body>
 </html>
