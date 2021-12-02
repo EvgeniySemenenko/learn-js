@@ -3,14 +3,17 @@
 <meta charset="UTF-8">
   <body>
   <script>
-     let typeLetter = prompt('Буковку, пожалуйста', []);
-    if ((typeLetter >= 'A') & (typeLetter <= 'Z')) {
-      console.log(`${typeLetter} - Это латинская заглавная буква!`);
-    } else if ((typeLetter >= 'a') & (typeLetter <= 'z')) {
-      console.log(`${typeLetter} - Это латинская строчная буква!`);
-    } else {
-      console.log(`${typeLetter} что-то не то, попробуйте еще разок;-)`);
-    }
+    let num = 25;
+     if (typeof(num) !== 'number') {
+       console.log(`${num} не число, а нужно число!`)
+     } else if (num === 105) {
+       console.log(`${num} Бинго! угадал в исключение!`)
+     } else if ((num > 100) || (num < 1) || (num === 3) || (num === 7) || (num === 8 ) || (num === 9) || (num === 22) || (num === 23) || (num === 24) || (num === 25)){
+     console.log(`${num} - блин! попали в выборку`);
+     } else {
+       console.log(`${num} - дышите глубже! - Все нормально!`);
+     }
+
   </script>
   </body>
 </html>
