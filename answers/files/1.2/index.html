@@ -3,14 +3,12 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    let count = 0;
-    while (true) {
-      count++;
-      if (count == 100) {
-        console.log(count);
-        break;
+    const number = 565;
+    let delitel = number - 1;
+    while ((number % delitel) !== 0) {
+      delitel--;
       }
-    }
+      console.log(delitel);
   </script>
   </body>
 </html>
