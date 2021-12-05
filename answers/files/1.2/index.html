@@ -3,12 +3,20 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    const number = 565;
-    let delitel = number - 1;
-    while ((number % delitel) !== 0) {
-      delitel--;
-      }
-      console.log(delitel);
+    let transport = 'bicycle';
+    // let transport = 'motorcycle';
+    // let transport = 'car';
+    switch (transport) {
+      case ('bicycle'):
+      case ('motorcycle'):
+      console.log('2 wheels');
+      break;
+      case ('car'):
+      console.log('4 wheels');
+      break;
+      default:
+        console.log('0 wheels');
+    }
   </script>
   </body>
 </html>
