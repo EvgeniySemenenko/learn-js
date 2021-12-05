@@ -3,13 +3,10 @@
 <meta charset="UTF-8">
   <body>
   <script>
-  const a = '';
-  const b = 'Yes!';
-  const c = null;
-  const d = '';
-  let message;
-  message = a || b || b || c || null;
-  console.log(message);
+    const firstMessage = undefined;
+    const secondMessage = '34';
+    const message = ((!firstMessage && 'default message') || (!secondMessage && 'default message')) || (firstMessage && secondMessage && (firstMessage + ' ' + secondMessage))// || (firstMessage || secondMessage || 'default message');
+    console.log(message);
   </script>
   </body>
 </html>
