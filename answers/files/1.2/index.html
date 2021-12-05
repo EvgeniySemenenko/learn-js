@@ -3,10 +3,12 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    const firstMessage = undefined;
-    const secondMessage = '34';
-    const message = ((!firstMessage && 'default message') || (!secondMessage && 'default message')) || (firstMessage && secondMessage && (firstMessage + ' ' + secondMessage))// || (firstMessage || secondMessage || 'default message');
-    console.log(message);
+    const a = null;
+    const b = 'kasjdh';
+    const c = 'sdkjvc';
+    const d = undefined;
+    const message = a ?? b ?? c ?? d ?? null;
+    console.log(message)
   </script>
   </body>
 </html>
