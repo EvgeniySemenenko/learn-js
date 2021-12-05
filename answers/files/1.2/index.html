@@ -3,12 +3,13 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    const a = null;
-    const b = 'kasjdh';
-    const c = 'sdkjvc';
-    const d = undefined;
-    const message = a ?? b ?? c ?? d ?? null;
-    console.log(message)
+   let i=0;
+   while (i <= 100) {
+     if (((i >= 5) && (i <= 50)) || ((i >= 70) && (i <= 80))) {
+       console.log(i);
+     }
+     i++;
+   }
   </script>
   </body>
 </html>
