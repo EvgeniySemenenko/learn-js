@@ -3,13 +3,15 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    function isExponenation (a, b) {
-      let result = a ** b;
-      return result;
+    // let arg = '0';
+    // let arg = nul;
+    // let arg = undefined;
+    function someFunction (arg = '') {
+      if(!arg) {
+        return;}
+      console.log('Hello World');
     }
-    let x = prompt('basis', 'x');
-    let y = prompt('power', 'y');
-    console.log(isExponenation(x , y));
+    someFunction();
   </script>
   </body>
 </html>
