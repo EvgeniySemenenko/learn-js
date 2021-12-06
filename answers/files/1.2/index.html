@@ -3,20 +3,13 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    let transport = 'bicycle';
-    // let transport = 'motorcycle';
-    // let transport = 'car';
-    switch (transport) {
-      case ('bicycle'):
-      case ('motorcycle'):
-      console.log('2 wheels');
-      break;
-      case ('car'):
-      console.log('4 wheels');
-      break;
-      default:
-        console.log('0 wheels');
+    function isExponenation (a, b) {
+      let result = a ** b;
+      return result;
     }
+    let x = prompt('basis', 'x');
+    let y = prompt('power', 'y');
+    console.log(isExponenation(x , y));
   </script>
   </body>
 </html>
