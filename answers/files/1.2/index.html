@@ -3,11 +3,19 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    function isEven(num) {
-      if (num % 2 == 0) return true;
-      else return false;
+    function getElements(count) {
+      return [1,2,3,4,5,6,7,8,9,10,11,12,13,14].slice(0, count)
     }
-    console.log(isEven(6));
+    // let i = 0;
+    // let a = getElements(i);
+    // let b = getElements(i+1)
+    // console.log(a.length);
+    // console.log(b.length);
+    // while (getElements(i).length < getElements(i+1).length) {
+    //   i++;
+    // }
+    // console.log(`В функции всего ${i} элементов`);
+    console.log(getElements());
   </script>
   </body>
 </html>
