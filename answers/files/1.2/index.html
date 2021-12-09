@@ -3,16 +3,20 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    let arg = '';
-    // let arg = null;
-    // let arg = undefined;
-    let a = null;
-    function someFunction (arg = '') {
-      if(!arg) {
-        return;}
-      console.log('Hello World');
+    const num = 2;
+    let fA = num === 3;
+    let fB = (num >= 7) && (num <= 9);
+    let fC = (num >= 22) && (num <= 25);
+    let fD = num <= 1;
+    let fE = (num >100) && !(num === 105);
+    let tA = typeof num === 'number';
+    console.log(fA, fB, fC, fD, fE);
+    console.log(tA);
+    if (!tA || fA || fB || fC || fD || fE) {
+      console.log(`${num} - problem`);
+    } else {
+      console.log(`${num} - OK`);
     }
-    someFunction(arg);
   </script>
   </body>
 </html>
