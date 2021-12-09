@@ -3,16 +3,33 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    function getDivision(a, b) {
-      if ((a/b) && (a/b !== Infinity)) {
-        return (a / b);
-      } else {
-        return (0);
+    function getType(a) {
+    switch (typeof a) {
+      case ('bigint'): {
+        return 'number';
+        break;
       }
+      case ('number'): {
+        return 'number';
+        break;
+      }
+      case ('boolean'):
+        return a;
+        break;
+      case ('string'):
+        return 'string';
+        break;
+      case ('object'):
+        return 'null';
+        break;
+      default:
+        return 'else';
     }
-    let a = 3;
-    let b = 345;
-    console.log(getDivision(a, b));
+      }
+    let a = null;
+    getType(a);
+    // console.log(typeof a);
+   console.log(getType(a));
   </script>
   </body>
 </html>
