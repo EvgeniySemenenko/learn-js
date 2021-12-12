@@ -3,33 +3,19 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    function getType(a) {
-    switch (typeof a) {
-      case ('bigint'): {
-        return 'number';
-        break;
+    // function someFunction (arg = '') {
+    //   if(!arg) {
+    //     return;
+    //   }
+    //   console.log('Hello World');
+    let arg = '';
+    let someFunction;
+    if (!arg) {
+      let someFunction = function () {
+        console.log('Hello World');
       }
-      case ('number'): {
-        return 'number';
-        break;
-      }
-      case ('boolean'):
-        return a;
-        break;
-      case ('string'):
-        return 'string';
-        break;
-      case ('object'):
-        return 'null';
-        break;
-      default:
-        return 'else';
+      someFunction();
     }
-      }
-    let a = null;
-    getType(a);
-    // console.log(typeof a);
-   console.log(getType(a));
   </script>
   </body>
 </html>
