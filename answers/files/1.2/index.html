@@ -3,13 +3,11 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    let sayHelloWorld = arg => {
-      if (!arg) {
-        return;
-      };
-      console.log('Hello World');
+    let num = -100;
+    let isPositiveNumber = (num) => {
+      return (num > 0) || false;
     };
-    sayHelloWorld('2');
+    console.log(isPositiveNumber(num));
   </script>
   </body>
 </html>
