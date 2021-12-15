@@ -3,11 +3,25 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    let num = 0;
-   let isPositiveNumber = (num < 0) ?
-    () => true:
-    () => false;
-   console.log(isPositiveNumber());
+    function getType(someThing) {
+      switch (typeof someThing) {
+        case ('bigint'):
+        case ('number'):
+          return 'number';
+        case ('boolean'):
+          return `${someThing}`;
+        case ('string'):
+          return 'string';
+        case ('object'):
+          return `${someThing && 'else'}`;
+        default:
+          return 'else';
+      };
+    };
+    // let someThing = 2n;
+    // let someThing = null;
+    let someThing = [1,2,3,4];
+    console.log(getType(someThing));
   </script>
   </body>
 </html>

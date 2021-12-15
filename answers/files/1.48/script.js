@@ -3,17 +3,18 @@ let rightOperand;
 let clear;
 let result;
 function onLeftOperandChange(value) {
-  console.log('onLeftOperandChange', value);
+  setExpression('adf');
+  // console.log('onLeftOperandChange', value);
   leftOperand = value;
 };
 console.log(leftOperand);
 function onRightOperandChange(value) {
-  console.log('onRightOperandChange', value);
+  // console.log('onRightOperandChange', value);
   rightOperand = value;
 };
 
 function onOperatorChange(value) {
-  console.log('onOperatorChange', value)
+  // console.log('onOperatorChange', value)
 };
 
 function onSubmit () {
@@ -38,6 +39,7 @@ function onSubmit () {
 //   console.log(onSubmit())
  }
 
+setResult(20);
 function onClear () {
   console.log('onClear')
   clear = onClear();
