@@ -3,13 +3,11 @@
 <meta charset="UTF-8">
   <body>
   <script>
-    let sayHelloWorld = function (arg) {
-      if (!arg) {
-        return;
-      };
-      console.log('Hello World');
+    function isEven(num) {
+      if (num % 2 === 0) return true;
+      return false;
     };
-    sayHelloWorld('');
+    console.log(isEven(32345678));
   </script>
   </body>
 </html>
