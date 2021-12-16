@@ -1,49 +1,86 @@
 let leftOperand;
 let rightOperand;
-let clear;
-let result;
-function onLeftOperandChange(value) {
-  setExpression('adf');
-  // console.log('onLeftOperandChange', value);
-  leftOperand = value;
-};
-console.log(leftOperand);
-function onRightOperandChange(value) {
-  // console.log('onRightOperandChange', value);
-  rightOperand = value;
+let operatorName;
+let operatorSymbol;
+let resultString;
+let someString;
+
+function getResult(leftOperand, operatorName, rightOperand) {
+  switch (operatorName) {
+    case 'ADDITION':
+      return (leftOperand + rightOperand);
+    case 'SUBTRACTION':
+      return (leftOperand - rightOperand);
+    case 'MULTIPLICATION':
+      return (leftOperand * rightOperand);
+    case 'EXPONENTIATION':
+      return (leftOperand ** rightOperand);
+    case 'DIVISION':
+      return (leftOperand / rightOperand);
+    case 'MODULUS':
+      return (leftOperand % rightOperand);
+    case 'ROOT':
+      return (leftOperand ** (1/rightOperand));
+  };
 };
 
+function onLeftOperandChange(value) {
+  leftOperand = +value;
+  // console.log(leftOperand);
+}
+
+function onRightOperandChange(value) {
+  rightOperand = +value;
+  // console.log(rightOperand);
+}
+
 function onOperatorChange(value) {
-  // console.log('onOperatorChange', value)
+  operatorName = value;
+  // console.log(operatorName);
+switch (operatorName) {
+  case 'ADDITION' :
+    operatorSymbol = ' + ';
+    break;
+  case 'SUBTRACTION' :
+    operatorSymbol = ' - ';
+    break;
+  case 'MULTIPLICATION' :
+    operatorSymbol = ' * ';
+    break;
+  case 'EXPONENTIATION' :
+    operatorSymbol = ' xª ';
+    break;
+  case 'DIVISION' :
+    operatorSymbol = ' / ';
+    break;
+  case 'MODULUS' :
+    operatorSymbol = ' % ';
+    break;
+  case 'ROOT' :
+    operatorSymbol = ' √ ';
+    break;
+};
+// console.log(operatorSymbol);
 };
 
 function onSubmit () {
-//     switch (onOperatorChange()) {
-//       case 'ADDITION' :
-//         return result = (Number(onLeftOperandChange(value)) + Number(onRightOperandChange(value)));
-//       case 'SUBTRACTION' :
-//         return result = Number(onLeftOperandChange(value)) - Number(onRightOperandChange(value));
-//       case 'MULTIPLICATION' :
-//         return result = Number(onLeftOperandChange(value)) * Number(onRightOperandChange(value));
-//       case 'EXPONENTIATION' :
-//         return result = Number(onLeftOperandChange(value)) ** Number(onRightOperandChange(value));
-//       case 'DIVISION' :
-//         return result = Number(onLeftOperandChange(value)) / Number(onRightOperandChange(value));
-//       case 'MODULUS' :
-//         return result = Number(onLeftOperandChange(value)) % Number(onRightOperandChange(value));
-//       case 'ROOT' :
-//         return result = Number(onLeftOperandChange(value)) ** 1/Number(onRightOperandChange(value));
-//     }
-//   }
-//   console.log(Number(onLeftOperandChange(value)))
-//   console.log(onSubmit())
- }
+  if (leftOperand && operatorSymbol && rightOperand) {
+    if (!someString) {
+      someString = leftOperand + operatorSymbol + rightOperand;
+    } else {
+      someString = '( '+ `${someString}` + ')' + `${operatorSymbol}` + `${rightOperand}`;
+    };
+    resultString = someString;
+    setExpression(resultString);
+    setResult(getResult(leftOperand, operatorName, rightOperand));
+  };
 
-setResult(20);
-function onClear () {
-  console.log('onClear')
-  clear = onClear();
+console.log('onSubmit');
 }
 
-// setExpression('(2 + 3) * 4')
-// setResult(50);
+function onClear () {
+  someString = undefined;
+  setResult(undefined);
+  setExpression('');
+  console.log('onClear')
+}
