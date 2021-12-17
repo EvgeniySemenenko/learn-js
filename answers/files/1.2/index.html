@@ -10,7 +10,10 @@
         d: 4,
     };
     for (let key in obj) {
-        console.log(key);
+        if (typeof obj[key] === "number") {
+            console.log(obj[key]);
+        }
+        ;
     };
 </script>
 </body>
