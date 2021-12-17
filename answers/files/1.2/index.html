@@ -1,13 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 <meta charset="UTF-8">
-  <body>
-  <script>
-    let num = -100;
-    let isPositiveNumber = (num) => {
-      return (num > 0) || false;
+<body>
+<script>
+    let countries = {
+        USA: {
+            population: 240000,
+            area: 150000,
+        },
+        Ukraine: {
+            population: 38000,
+            area: 100000,
+        },
+        Spain: {
+            population: 55000,
+            area: 90000,
+        },
+        Gonduras: {
+            population: 25000,
+            area: 33000,
+        },
     };
-    console.log(isPositiveNumber(num));
-  </script>
-  </body>
+    console.log(countries.USA.area);
+</script>
+</body>
 </html>

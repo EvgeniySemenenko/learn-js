@@ -76,11 +76,11 @@ function onSubmit () {
   };
 
 console.log('onSubmit');
-}
+};
 
 function onClear () {
   someString = undefined;
   setResult(undefined);
   setExpression('');
   console.log('onClear')
-}
+};
