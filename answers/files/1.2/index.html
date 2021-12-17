@@ -4,12 +4,14 @@
 <body>
 <script>
     const obj = {
-        a: {
-            b: 3
-        }
+        a: 1,
+        b: 2,
+        c: '3',
+        d: 4,
     };
-    delete obj.a.b;
-    console.log(obj.a);
+    for (let key in obj) {
+        console.log(key);
+    };
 </script>
 </body>
 </html>
