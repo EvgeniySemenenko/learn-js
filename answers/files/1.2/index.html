@@ -3,27 +3,15 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    const obj = {
-        a: 1,
-        b: 2,
-        c: '3',
-        d: 4,
+    const TOTAL = 'total';
+    const WIDTH = 'width';
+    const HEIGHT = 'height';
+    let dimentions = {
+        [TOTAL]: 42,
+        [WIDTH]: 21,
+        [HEIGHT]: 2,
     };
-    const obj1 = {
-        a: '23',
-        b: undefined,
-        c: null,
-        d: 1,
-    };
-    const obj2 = {
-        b:'42',
-        c: undefined,
-        d: 32,
-    };
-    let isKeyExist = function(objectName, key) {
-        return (key in objectName);
-    };
-    console.log(isKeyExist(obj1, 'c'));
+    console.log(dimentions);
 </script>
 </body>
 </html>
