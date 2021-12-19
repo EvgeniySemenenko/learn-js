@@ -3,15 +3,13 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    const TOTAL = 'total';
-    const WIDTH = 'width';
-    const HEIGHT = 'height';
-    let dimentions = {
-        [TOTAL]: 42,
-        [WIDTH]: 21,
-        [HEIGHT]: 2,
+    const obj = {
+        undefined: 1,
+        'undefined': '2',
     };
-    console.log(dimentions);
+    console.log(obj.undefined);
+    console.log(obj['undefined']);
+    console.log(obj[undefined] === obj['undefined']);
 </script>
 </body>
 </html>
