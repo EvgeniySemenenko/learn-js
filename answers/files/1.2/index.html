@@ -3,13 +3,22 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    const obj = {
-        undefined: 1,
-        'undefined': '2',
+    let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130,
+        Alice: 200,
+        Bob: 170,
     };
-    console.log(obj.undefined);
-    console.log(obj['undefined']);
-    console.log(obj[undefined] === obj['undefined']);
+    let summ = 0;
+    let i=0;
+    let mean;
+    for (key in salaries) {
+       summ += salaries[key];
+       i++;
+    };
+    mean = summ/i;
+    console.log(mean);
 </script>
 </body>
 </html>
