@@ -9,12 +9,21 @@
         c: '3',
         d: 4,
     };
-    for (let key in obj) {
-        if (typeof obj[key] === "number") {
-            console.log(obj[key]);
-        }
-        ;
+    const obj1 = {
+        a: '23',
+        b: undefined,
+        c: null,
+        d: 1,
     };
+    const obj2 = {
+        b:'42',
+        c: undefined,
+        d: 32,
+    };
+    let isKeyExist = function(objectName, key) {
+        return (key in objectName);
+    };
+    console.log(isKeyExist(obj1, 'c'));
 </script>
 </body>
 </html>
