@@ -3,13 +3,16 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    function isOdd(num) {
-        if (num % 2) {
-            return false
-        };
-        return true;
-    };
-    console.log(isOdd(32345671));
+    function getDivision(dividend, divider) {
+        let quotient = dividend/divider;
+        let result;
+        let zero = (quotient === Infinity) || 0;
+        zero ? result = 0: result = quotient;
+        return (result);
+    }
+    let divident = NaN;
+    let divider = 1;
+    console.log(getDivision(divident, divider));
 </script>
 </body>
 </html>

@@ -26,42 +26,38 @@ function getResult(leftOperand, operatorName, rightOperand) {
 
 function onLeftOperandChange(value) {
   leftOperand = +value;
-  // console.log(leftOperand);
 }
 
 function onRightOperandChange(value) {
   rightOperand = +value;
-  // console.log(rightOperand);
 }
 
 function onOperatorChange(value) {
   operatorName = value;
-  // console.log(operatorName);
 switch (operatorName) {
   case 'ADDITION' :
-    operatorSymbol = ' + ';
+    operatorSymbol = ' + '
     break;
   case 'SUBTRACTION' :
-    operatorSymbol = ' - ';
+    operatorSymbol = ' - '
     break;
   case 'MULTIPLICATION' :
-    operatorSymbol = ' * ';
+    operatorSymbol = ' * '
     break;
   case 'EXPONENTIATION' :
-    operatorSymbol = ' xª ';
+    operatorSymbol = ' xª '
     break;
   case 'DIVISION' :
-    operatorSymbol = ' / ';
+    operatorSymbol = ' / '
     break;
   case 'MODULUS' :
-    operatorSymbol = ' % ';
+    operatorSymbol = ' % '
     break;
   case 'ROOT' :
-    operatorSymbol = ' √ ';
+    operatorSymbol = ' √ '
     break;
-};
-// console.log(operatorSymbol);
-};
+}
+}
 
 function onSubmit () {
   if (leftOperand && operatorSymbol && rightOperand) {
@@ -82,5 +78,4 @@ function onClear () {
   someString = undefined;
   setResult(undefined);
   setExpression('');
-  console.log('onClear')
 };
