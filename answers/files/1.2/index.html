@@ -3,22 +3,13 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    let salaries = {
-        John: 100,
-        Ann: 160,
-        Pete: 130,
-        Alice: 200,
-        Bob: 170,
+    function isOdd(num) {
+        if (num % 2) {
+            return false
+        };
+        return true;
     };
-    let summ = 0;
-    let i=0;
-    let mean;
-    for (key in salaries) {
-       summ += salaries[key];
-       i++;
-    };
-    mean = summ/i;
-    console.log(mean);
+    console.log(isOdd(32345671));
 </script>
 </body>
 </html>
