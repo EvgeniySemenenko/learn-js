@@ -4,14 +4,11 @@
 <body>
 <script>
     function getDivision(dividend, divider) {
-        let quotient = dividend/divider;
-        let result;
-        let zero = (quotient === Infinity) || 0;
-        zero ? result = 0: result = quotient;
-        return (result);
+        return result = ((dividend / divider !== Infinity) && (dividend / divider)) || ('0');
     }
+
     let divident = NaN;
-    let divider = 1;
+    let divider = 2;
     console.log(getDivision(divident, divider));
 </script>
 </body>
