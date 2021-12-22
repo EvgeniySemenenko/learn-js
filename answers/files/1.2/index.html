@@ -3,13 +3,29 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    function getDivision(dividend, divider) {
-        return result = ((dividend / divider !== Infinity) && (dividend / divider)) || ('0');
-    }
-
-    let divident = NaN;
-    let divider = 2;
-    console.log(getDivision(divident, divider));
+    function getType(someThing) {
+        let typeOfSomeThing = typeof(someThing);
+        switch (true) {
+            case (someThing === null):
+                return 'null';
+            case (typeOfSomeThing === 'bigint'):
+            case (typeOfSomeThing === 'number'):
+                return 'number';
+            case (typeOfSomeThing === 'boolean'):
+                return `${someThing}`;
+            case (typeOfSomeThing === 'string'):
+                return 'string';
+            case (typeOfSomeThing === 'object'):
+                return 'else';
+            default:
+                return 'else';
+        };
+    };
+    let someThing = 2n;
+    // let someThing = null;
+    // let someThing = [1,2,3,4];
+    // let someThing = undefined;
+    console.log(getType(someThing));
 </script>
 </body>
 </html>
