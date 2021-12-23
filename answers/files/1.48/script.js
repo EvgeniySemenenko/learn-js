@@ -78,7 +78,8 @@ function onSubmit() {
 };
 
 function onClear() {
-    someString = undefined;
-    setResult(undefined);
+    leftOperand = null
+    someString = null;
     setExpression('');
+
 };
