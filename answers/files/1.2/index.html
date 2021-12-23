@@ -3,29 +3,18 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    function someFunction (arg = '') {
-        if(!arg) {
-            return;
+    let isPositiveNumber = (num) => {
+        return (num > 0)
         }
-        console.log('Hello World');
-    }
 
-    let showNothing = (arg = '') => {
-        if (!arg) {
-            return;
-        }
-        console.log('Hello world 2');
-    }
-    let arg = null;
-    //     let arg = undefined;
-    //     let arg = NaN;
-    //     let arg = '';
-    //     let arg = 123;
-    //     let arg = true;
-    //     let arg = '1';
-    // let arg = 2;
-    someFunction(arg);
-    showNothing(arg);
+    // let num = undefined;
+    // let num = NaN;
+    //     let num = '';
+    //     let num = 123;
+    //     let num = true;
+    let num = 21;
+    // let num = 2;
+    console.log(isPositiveNumber(num))
 </script>
 </body>
 </html>
