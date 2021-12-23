@@ -3,29 +3,29 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    function getType(someThing) {
-        let typeOfSomeThing = typeof(someThing);
-        switch (true) {
-            case (someThing === null):
-                return 'null';
-            case (typeOfSomeThing === 'bigint'):
-            case (typeOfSomeThing === 'number'):
-                return 'number';
-            case (typeOfSomeThing === 'boolean'):
-                return `${someThing}`;
-            case (typeOfSomeThing === 'string'):
-                return 'string';
-            case (typeOfSomeThing === 'object'):
-                return 'else';
-            default:
-                return 'else';
-        };
-    };
-    let someThing = 2n;
-    // let someThing = null;
-    // let someThing = [1,2,3,4];
-    // let someThing = undefined;
-    console.log(getType(someThing));
+    function someFunction (arg = '') {
+        if(!arg) {
+            return;
+        }
+        console.log('Hello World');
+    }
+
+    let showNothing = (arg = '') => {
+        if (!arg) {
+            return;
+        }
+        console.log('Hello world 2');
+    }
+    let arg = null;
+    //     let arg = undefined;
+    //     let arg = NaN;
+    //     let arg = '';
+    //     let arg = 123;
+    //     let arg = true;
+    //     let arg = '1';
+    // let arg = 2;
+    someFunction(arg);
+    showNothing(arg);
 </script>
 </body>
 </html>
