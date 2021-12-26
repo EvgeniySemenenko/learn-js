@@ -10,8 +10,12 @@
         },
     };
     const secondUser = firstUser;
-    firstUser.firstName = 'Bob';
-    console.log(secondUser.firstName);
+    const profile = secondUser.profile;
+    profile.height = 180;
+
+    console.log(secondUser.profile);
+    console.log(firstUser.profile);
+    console.log(profile);
 </script>
 </body>
 </html>
