@@ -3,18 +3,15 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    let isPositiveNumber = (num) => {
-        return (num > 0)
-        }
-
-    // let num = undefined;
-    // let num = NaN;
-    //     let num = '';
-    //     let num = 123;
-    //     let num = true;
-    let num = 21;
-    // let num = 2;
-    console.log(isPositiveNumber(num))
+    const firstUser = {
+        firstName: 'John',
+        profile: {
+            age: 25,
+        },
+    };
+    const secondUser = firstUser;
+    firstUser.firstName = 'Bob';
+    console.log(secondUser.firstName);
 </script>
 </body>
 </html>
