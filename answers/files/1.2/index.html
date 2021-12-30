@@ -3,19 +3,16 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    const firstUser = {
-        firstName: 'John',
-        profile: {
-            age: 25,
-        },
-    };
-    const secondUser = firstUser;
-    let age = secondUser.profile.age;
-    age = 30;
-
-    console.log(secondUser.profile.age);
-    console.log(firstUser.profile.age);
-    console.log(age);
+const user = {
+    getFirstName(value) {
+     if (!value) return 'empty';
+     else return `${value}`;
+    },
+};
+const emptyName = user.getFirstName();
+const firstName = user.getFirstName('Mike');
+console.log(emptyName);
+console.log(firstName);
 </script>
 </body>
 </html>
