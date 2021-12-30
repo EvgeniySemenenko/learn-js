@@ -3,15 +3,14 @@
 <meta charset="UTF-8">
 <body>
 <script>
-    const user = {
-        getFirstName(value) {
-            return !value && 'empty' || `${value}`;
-        },
-    };
-    const emptyName = user.getFirstName();
-    const firstName = user.getFirstName('Mike');
-    console.log(emptyName);
-    console.log(firstName);
+const user = {
+    name: 'John',
+    user(){
+        return this
+    }
+};
+const name = user.user().user().user().user().user().user().name;
+console.log(name);
 </script>
 </body>
 </html>
