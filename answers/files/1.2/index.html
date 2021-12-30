@@ -3,15 +3,15 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const user = {
-    firstName: 'John',
-    lastName: 'Smith',
-    getFullName() {
-        return this.firstName + ' ' + this.lastName
-    },
-};
-const fullName = user.getFullName();
-console.log(fullName);
+    const user = {
+        getFirstName(value) {
+            return !value && 'empty' || `${value}`;
+        },
+    };
+    const emptyName = user.getFirstName();
+    const firstName = user.getFirstName('Mike');
+    console.log(emptyName);
+    console.log(firstName);
 </script>
 </body>
 </html>
