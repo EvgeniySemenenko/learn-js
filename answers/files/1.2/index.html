@@ -4,15 +4,14 @@
 <body>
 <script>
 const user = {
-    getFirstName(value) {
-     if (!value) return 'empty';
-     else return `${value}`;
+    firstName: 'John',
+    lastName: 'Smith',
+    getFullName() {
+        return this.firstName + ' ' + this.lastName
     },
 };
-const emptyName = user.getFirstName();
-const firstName = user.getFirstName('Mike');
-console.log(emptyName);
-console.log(firstName);
+const fullName = user.getFullName();
+console.log(fullName);
 </script>
 </body>
 </html>
