@@ -3,18 +3,16 @@
 <meta charset="UTF-8">
 <body>
 <script>
-function User(name) {
-    this.getFirstName = function () {
-        return !name && 'empty' || `${name}`;
-    }
-}
-const userWithName = new User('Mike');
-const firstName = userWithName.getFirstName();
-console.log(firstName);
-
-const userWithoutName = new User();
-const emptyName = userWithoutName.getFirstName();
-console.log(emptyName);
+const User = function (){
+  this.firstName = 'John';
+  this.lastName = 'Smith';
+  this.getFullName = function () {
+    return this.firstName + ' ' + this.lastName;
+  };
+};
+const user = new User();
+const fullName = user.getFullName();
+console.log(fullName);
 </script>
 </body>
 </html>
