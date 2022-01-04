@@ -3,10 +3,24 @@
 <meta charset="UTF-8">
 <body>
 <script>
-let a = 10.36;
-let b = Math.trunc(a*10)/10;
-    b = b.toString(10);
-console.log(b);
+let orelReshka = () => {
+  let rnd = Math.random();
+  return (rnd <= 0.699999999999999) && 'orel' || 'reshka';
+};
+
+let orel = 0;
+let reshka = 0;
+let countMax = 1e3;
+
+for (let i = 0; i < countMax; i++) {
+  if (orelReshka() === 'orel') orel++
+    else reshka++;
+};
+
+let orelPercent = orel/countMax*100;
+let reshkaPecent = reshka/countMax*100;
+
+console.log(`Orel - ${orelPercent.toFixed(3)} %; Reshka - ${reshkaPecent.toFixed(2)}  %`);
 </script>
 </body>
 </html>
