@@ -3,24 +3,24 @@
 <meta charset="UTF-8">
 <body>
 <script>
-let orelReshka = () => {
-  let rnd = Math.random();
-  return (rnd <= 0.699999999999999) && 'orel' || 'reshka';
+let coinToss = () => {
+    let rnd = Math.random();
+    let out = (rnd <= 0.7) ? 'head' : 'tail';
+    return out;
 };
 
-let orel = 0;
-let reshka = 0;
-let countMax = 1e3;
+let head = 0;
+let tail = 0;
+let countMax = 1000;
 
 for (let i = 0; i < countMax; i++) {
-  if (orelReshka() === 'orel') orel++
-    else reshka++;
+    (coinToss() === 'head') ? head++ : tail++;
 };
 
-let orelPercent = orel/countMax*100;
-let reshkaPecent = reshka/countMax*100;
+let headPercent = head/countMax*100;
+let tailPercent = tail/countMax*100;
 
-console.log(`Orel - ${orelPercent.toFixed(3)} %; Reshka - ${reshkaPecent.toFixed(2)}  %`);
+console.log(`Head - ${headPercent.toFixed(3)} %; Tail - ${tailPercent.toFixed(2)}  %`);
 </script>
 </body>
 </html>
