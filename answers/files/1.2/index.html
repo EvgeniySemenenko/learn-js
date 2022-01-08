@@ -4,10 +4,9 @@
 <body>
 <script>
 const fruit = ['Apple', 'Orange', 'Plum'];
-const otherFruits = fruit.slice();
-fruit.push('Pineapple');
-console.log(fruit);
-console.log(otherFruits);
+  fruit.forEach(function (elem, index) {
+  console.log(elem.toUpperCase());
+});
 </script>
 </body>
 </html>
