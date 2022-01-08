@@ -4,10 +4,12 @@
 <body>
 <script>
 const fruit = ['Apple', 'Orange', 'Plum'];
-for (let i = 0; i < fruit.length; i++) {
-    let upperCaseArrayElement = fruit[i].toUpperCase();
-    console.log(upperCaseArrayElement);
-};
+const otherFruits = fruit.map(item => {
+    if (item !== -1) return item;
+});
+fruit.push('Pineapple');
+console.log(fruit);
+console.log(otherFruits);
 </script>
 </body>
 </html>
