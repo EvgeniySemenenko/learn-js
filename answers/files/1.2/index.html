@@ -4,9 +4,7 @@
 <body>
 <script>
 const fruit = ['Apple', 'Orange', 'Plum'];
-const otherFruits = fruit.map(item => {
-    if (item !== -1) return item;
-});
+const otherFruits = fruit.slice();
 fruit.push('Pineapple');
 console.log(fruit);
 console.log(otherFruits);
