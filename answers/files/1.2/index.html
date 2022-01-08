@@ -3,24 +3,13 @@
 <meta charset="UTF-8">
 <body>
 <script>
-let coinToss = () => {
-    let rnd = Math.random();
-    let out = (rnd <= 0.7) ? 'head' : 'tail';
-    return out;
+let getDecimalPartOfNumber = function (num) {
+let numToString = `${num}`;
+let dotPosition = numToString.indexOf('.');
+let decimalPartOfNumber = numToString.slice(dotPosition + 1);
+return decimalPartOfNumber;
 };
-
-let head = 0;
-let tail = 0;
-let countMax = 1000;
-
-for (let i = 0; i < countMax; i++) {
-    (coinToss() === 'head') ? head++ : tail++;
-};
-
-let headPercent = head/countMax*100;
-let tailPercent = tail/countMax*100;
-
-console.log(`Head - ${headPercent.toFixed(3)} %; Tail - ${tailPercent.toFixed(2)}  %`);
+console.log(getDecimalPartOfNumber(100.4567));
 </script>
 </body>
 </html>
