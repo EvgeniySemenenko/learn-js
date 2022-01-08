@@ -3,13 +3,10 @@
 <meta charset="UTF-8">
 <body>
 <script>
-let getDecimalPartOfNumber = function (num) {
-let numToString = `${num}`;
-let dotPosition = numToString.indexOf('.');
-let decimalPartOfNumber = numToString.slice(dotPosition + 1);
-return decimalPartOfNumber;
-};
-console.log(getDecimalPartOfNumber(100.4567));
+const fruit = ['Apple', 'Orange', 'Plum'];
+let lastElementIndex = fruit.length - 1;
+let lastElement = fruit[lastElementIndex];
+console.log(lastElement);
 </script>
 </body>
 </html>
