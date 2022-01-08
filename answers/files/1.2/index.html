@@ -3,10 +3,11 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const fruit = ['Apple', 'Orange', 'Plum'];
-  fruit.forEach(function (elem, index) {
-  console.log(elem.toUpperCase());
-});
+const fruitList = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+let isItemInOurList = function (fruit) {
+    return fruitList.includes(fruit) && fruit || 'null';
+};
+console.log(isItemInOurList());
 </script>
 </body>
 </html>
