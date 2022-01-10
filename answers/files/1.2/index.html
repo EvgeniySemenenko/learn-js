@@ -3,16 +3,15 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const fruit = ['Apple', 'Orange', 'Plum', 'pineapple'];
-let result = fruit.filter(item => {
-    if ((fruit.indexOf(item) + 1) % 2 !== 0) {
-        return item;
-    } else {
-        return false;
-    }
-});
-console.log(result);
-console.log(fruit);
+const students = [
+    { id: 1, name: 'Quincy', grade: 21 },
+    { id: 2, name: 'Jason', grade: 33 },
+    { id: 3, name: 'Alexis', grade: 87 },
+    { id: 4, name: 'Sam', grade: 100 },
+    { id: 5, name: 'Katie', grade: 64 }
+];
+let findedStudent = students.find(item => item.name === 'Sam');
+console.log(findedStudent);
 </script>
 </body>
 </html>
