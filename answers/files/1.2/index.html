@@ -5,7 +5,7 @@
 <script>
 const fruit = ['Apple', 'Orange', 'Plum', 'pineapple'];
 let result = fruit.filter(item => {
-    if (item.toLowerCase()[0] !== 'p') {
+    if ((fruit.indexOf(item) + 1) % 2 !== 0) {
         return item;
     } else {
         return false;
