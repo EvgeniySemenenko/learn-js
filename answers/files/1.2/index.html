@@ -3,22 +3,16 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple', 'Peach', 'Melone', 'Watermelone'];
-let deleteNeighbor = function (arr, element) {
-  let targetElementIndex = arr.indexOf(element);
-  let headCuttedElements = arr.slice();
-  let tailCuttedElements = arr.slice();
-  if (targetElementIndex <= 1) {
-      headCuttedElements = [];
-  } else {
-      let head = headCuttedElements.splice(targetElementIndex - 1);
-  };
-      let tail = tailCuttedElements.slice(targetElementIndex + 2);
-
-return resultOfCutting = headCuttedElements.concat(tail);
-};
+const fruit = ['Apple', 'Orange', 'Plum', 'pineapple'];
+let result = fruit.filter(item => {
+    if (item.toLowerCase()[0] !== 'p') {
+        return item;
+    } else {
+        return false;
+    }
+});
+console.log(result);
 console.log(fruit);
-console.log(`Результат работы функции:`, deleteNeighbor(fruit, 'Apple'));
 </script>
 </body>
 </html>
