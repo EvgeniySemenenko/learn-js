@@ -10,8 +10,8 @@ const students = [
     { id: 4, name: 'Sam', grade: 100 },
     { id: 5, name: 'Katie', grade: 64 }
 ];
-let findedStudent = students.find(item => item.name === 'Sam');
-console.log(findedStudent);
+let compareGrade = students.sort((a,b) => a.grade < b.grade ? 1: -1);
+console.log(compareGrade);
 </script>
 </body>
 </html>
