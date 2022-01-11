@@ -3,15 +3,15 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const students = [
-    { id: 1, name: 'Quincy', grade: 21 },
-    { id: 2, name: 'Jason', grade: 33 },
-    { id: 3, name: 'Alexis', grade: 87 },
-    { id: 4, name: 'Sam', grade: 100 },
-    { id: 5, name: 'Katie', grade: 64 }
-];
-let compareGrade = students.sort((a,b) => a.grade < b.grade ? 1: -1);
-console.log(compareGrade);
+const user = {
+    getFirstName(value = `empty`) {
+        return value;
+    }
+};
+const emptyName = user.getFirstName();
+const firstName = user.getFirstName('Mike');
+console.log(emptyName);
+console.log(firstName);
 </script>
 </body>
 </html>
