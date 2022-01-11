@@ -4,14 +4,13 @@
 <body>
 <script>
 const user = {
-    getFirstName(value = `empty`) {
-        return value;
-    }
+  name : 'John',
+  user() {
+      return this
+  }
 };
-const emptyName = user.getFirstName();
-const firstName = user.getFirstName('Mike');
-console.log(emptyName);
-console.log(firstName);
+const name = user.user().user().user().user().user().user().name;
+console.log(name);
 </script>
 </body>
 </html>
