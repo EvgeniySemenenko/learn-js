@@ -3,15 +3,15 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const User = function() {
-    this.name = 'John';
-    this.user = function () {
-        return this;
-    };
+const user = {
+    firstName: 'John',
+    profile: {
+        age: 25,
+    },
 };
-const user = new User();
-const name = user.user().user().user().user().user().user().name;
-console.log(name);
+
+const height = user.profile.height?.();
+console.log(height);
 </script>
 </body>
 </html>
