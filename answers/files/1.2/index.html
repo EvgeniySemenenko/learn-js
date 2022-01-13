@@ -4,11 +4,20 @@
 <body>
 <script>
 
-const fruit = ['Apple', 'Orange', 'Plum', 'pineapple'];
-let result = fruit.filter((item, index) => {
-   return ((index +1) % 2 !==0) ? item: false;
-});
-console.log(result);
+const students = [
+    { id: 1, name: 'Quincy', grade: 21 },
+    { id: 2, name: 'Jason', grade: 33 },
+    { id: 3, name: 'Alexis', grade: 87 },
+    { id: 4, name: 'Sam', grade: 100 },
+    { id: 5, name: 'Katie', grade: 64 }
+];
+
+let list = {};
+
+students.forEach(item => {
+    list[item.id] = item;
+})
+console.log(list);
 
 </script>
 </body>
