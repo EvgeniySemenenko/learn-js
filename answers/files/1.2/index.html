@@ -4,20 +4,21 @@
 <body>
 <script>
 
-const students = [
-    { id: 1, name: 'Quincy', grade: 21 },
-    { id: 2, name: 'Jason', grade: 33 },
-    { id: 3, name: 'Alexis', grade: 87 },
-    { id: 4, name: 'Sam', grade: 100 },
-    { id: 5, name: 'Katie', grade: 64 }
-];
+const fruit = 'pineapple apple orange orange apple plum orange apple pineapple apple';
+let fruits = fruit.split(` `);
 
-let list = {};
+let objFruits = {};
 
-students.forEach(item => {
-    list[item.id] = item;
-})
-console.log(list);
+for (let i = 0; i < fruits.length; i++) {
+    if (fruits[i] in objFruits) {
+      objFruits[fruits[i]] = objFruits[fruits[i]] + 1;
+    } else {
+      objFruits[fruits[i]] = 1;
+    };
+};
+
+console.log(objFruits);
+
 
 </script>
 </body>
