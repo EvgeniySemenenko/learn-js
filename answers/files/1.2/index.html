@@ -3,17 +3,15 @@
 <meta charset="UTF-8">
 <body>
 <script>
-function User(name = 'empty') {
-    this.name = name;
-    this.getFirstName = () => name;
-}
-const userWithName = new User('Mike');
-const firstName = userWithName.getFirstName();
-console.log(firstName);
-
-const userWithoutName = new User();
-const emptyName = userWithoutName.getFirstName();
-console.log(emptyName);
+const User = function() {
+    this.name = 'John';
+    this.user = function () {
+        return this;
+    };
+};
+const user = new User();
+const name = user.user().user().user().user().user().user().name;
+console.log(name);
 </script>
 </body>
 </html>
