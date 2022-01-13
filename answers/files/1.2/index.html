@@ -3,10 +3,13 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const fruit = ['Apple', 'Orange', 'Plum'];
-for (let item of fruit) {
-    console.log(item.toUpperCase());
+
+const fruitList = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+let isItemInOurList = function (fruit) {
+    return (fruit)? fruit: 'null';
 };
+console.log(isItemInOurList());
+
 </script>
 </body>
 </html>
