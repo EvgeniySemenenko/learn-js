@@ -4,15 +4,13 @@
 <body>
 <script>
 
-const user = {
-    firstName: 'John',
-    profile: {
-        age: 25,
-    },
-};
-let {firstName: name, profile: {age: age = null}} = user;
-console.log(name);
-console.log(age);
+const fruits = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+let newFruits = [...fruits];
+newFruits[3] = 'X3';
+console.log(newFruits);
+console.log(fruits);
+
+
 </script>
 </body>
 </html>
