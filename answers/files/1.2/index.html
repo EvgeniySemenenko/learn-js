@@ -4,20 +4,10 @@
 <body>
 <script>
 
-const fruitsCount = {
-    pineapple: 2,
-    apple: 4,
-    orange: 3,
-    plum: 1
-};
-let arr = Object.entries(fruitsCount);
-let resultArr = [];
-for (let i = 0; i < arr.length; i++) {
-    let temporaryArrString = arr[i].join(':');
-    resultArr.push(temporaryArrString);
-};
-
-console.log(resultArr.join('; '));
+const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+let [first, ...rest] = fruit;
+console.log(first);
+console.log(rest);
 </script>
 </body>
 </html>
