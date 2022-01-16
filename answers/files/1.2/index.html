@@ -4,12 +4,15 @@
 <body>
 <script>
 
-const fruits = ['Apple', 'Orange', 'Plum', 'Pineapple'];
-let newFruits = [...fruits];
-newFruits[3] = 'X3';
-console.log(newFruits);
-console.log(fruits);
+const fruits = ['Apple', 'Orange'];
+const otherFruits = ['Orange', 'Plum', 'Pineapple'];
+const merge = [...fruits, ...otherFruits];
 
+uniqueArray = merge.filter(function (item, pos) {
+    return merge.indexOf(item) === pos;
+});
+
+console.log(uniqueArray);
 
 </script>
 </body>
