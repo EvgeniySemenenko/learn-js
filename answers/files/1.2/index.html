@@ -4,22 +4,20 @@
 <body>
 <script>
 
-const fruit = 'pineapple apple orange orange apple plum orange apple pineapple apple';
-let fruits = fruit.split(` `);
-
-let objFruits = {};
-
-for (let i = 0; i < fruits.length; i++) {
-    if (fruits[i] in objFruits) {
-      objFruits[fruits[i]] = objFruits[fruits[i]] + 1;
-    } else {
-      objFruits[fruits[i]] = 1;
-    };
+const fruitsCount = {
+    pineapple: 2,
+    apple: 4,
+    orange: 3,
+    plum: 1
+};
+let arr = Object.entries(fruitsCount);
+let resultArr = [];
+for (let i = 0; i < arr.length; i++) {
+    let temporaryArrString = arr[i].join(':');
+    resultArr.push(temporaryArrString);
 };
 
-console.log(objFruits);
-
-
+console.log(resultArr.join('; '));
 </script>
 </body>
 </html>
