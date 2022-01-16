@@ -4,8 +4,12 @@
 <body>
 <script>
 
-const user = { id: 1, name: 'John', grade: 21 };
-const newUser = {...user};
+const userFirstPart = { id: 1, name: 'John', grade: 21 };
+const userSecondPart = { lastName: 'Smith', profile: { age: 30 } };
+const allUser = {...userFirstPart, ...userSecondPart};
+console.log(userFirstPart);
+console.log(userSecondPart);
+console.log(allUser);
 
 </script>
 </body>
