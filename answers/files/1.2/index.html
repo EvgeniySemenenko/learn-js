@@ -4,9 +4,15 @@
 <body>
 <script>
 
-const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
-let [newVariable]= fruit.slice().reverse();
-console.log(newVariable);
+const user = {
+    firstName: 'John',
+    profile: {
+        age: 25,
+    },
+};
+let {firstName: name, profile: {age: age = null}} = user;
+console.log(name);
+console.log(age);
 </script>
 </body>
 </html>
