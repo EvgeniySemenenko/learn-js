@@ -4,10 +4,18 @@
 <body>
 <script>
 
-const fruit = ['Apple', 'Orange', 'Plum', 'pineapple'];
-let result = fruit.filter(item => item[0].toLowerCase() !== 'p');
-console.log(result);
-console.log(fruit);
+const students = [
+    { id: 1, name: 'Quincy', grade: 21 },
+    { id: 2, name: 'Jason', grade: 33 },
+    { id: 3, name: 'Alexis', grade: 87 },
+    { id: 4, name: 'Sam', grade: 100 },
+    { id: 5, name: 'Katie', grade: 64 }
+];
+
+let list = students.reduce((prev, item) => (prev[item.id] = item, prev), {})
+
+console.log(students);
+console.log(list);
 
 </script>
 </body>
