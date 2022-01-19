@@ -4,17 +4,14 @@
 <body>
 <script>
 
-const students = [
-    { id: 1, name: 'Quincy', grade: 21 },
-    { id: 2, name: 'Jason', grade: 33 },
-    { id: 3, name: 'Alexis', grade: 87 },
-    { id: 4, name: 'Sam', grade: 100 },
-    { id: 5, name: 'Katie', grade: 64 }
-];
+const fruit = 'pineapple apple orange orange apple plum orange apple pineapple apple';
 
-let list = students.reduce((prev, item) => (prev[item.id] = item, prev), {})
+let fruits = fruit.split(` `);
 
-console.log(students);
+let list = fruits.reduce((obj, item) => {
+    obj[item] ? obj[item]++ : obj[item] = 1; return obj
+}, {});
+
 console.log(list);
 
 </script>
