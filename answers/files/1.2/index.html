@@ -12,12 +12,13 @@ const fruitsCount = {
 };
 let arr = Object.entries(fruitsCount);
 console.log(arr);
-// for (let i = 0; i < arr.length; i++) {
-//     let temporaryArrString = arr[i].join(':');
-//     resultArr.push(temporaryArrString);
-// };
-// console.log(resultArr.join('; '));
-//
+
+let temporaryString = arr.reduceRight((prev, item) => (
+    item.join(':') + '; ' + prev), '');
+
+let finalString = temporaryString.slice(0, -2 );
+
+console.log(finalString);
 </script>
 </body>
 </html>
