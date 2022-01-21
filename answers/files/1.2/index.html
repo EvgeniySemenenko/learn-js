@@ -4,21 +4,17 @@
 <body>
 <script>
 
-const fruitsCount = {
-    pineapple: 2,
-    apple: 4,
-    orange: 3,
-    plum: 1
+const user = {
+    firstName: 'John',
+    profile: {
+        age:
+    },
 };
-let arr = Object.entries(fruitsCount);
-console.log(arr);
+let {firstName: name, profile: {age = null}} = user;
+console.log(name);
+console.log(age);
 
-let temporaryString = arr.reduceRight((prev, item) => (
-    item.join(':') + '; ' + prev), '');
 
-let finalString = temporaryString.slice(0, -2 );
-
-console.log(finalString);
 </script>
 </body>
 </html>

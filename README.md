@@ -133,8 +133,8 @@
     5. [Методы массивов](https://learn.javascript.ru/array-methods)
     6. [Перебираемые объекты](https://learn.javascript.ru/iterable) (OPTIONAL)
     7. [Map и Set](https://learn.javascript.ru/map-set) (OPTIONAL)
-    8. [WeakM
-    9. ющее присваивание](https://learn.javascript.ru/destructuring-assignment)
+    8. [Object.keys, values, entries](https://learn.javascript.ru/keys-values-entries)
+    9. [Деструктурирующее присваивание](https://learn.javascript.ru/destructuring-assignment)
     10. [Дата и время](https://learn.javascript.ru/date) (OPTIONAL)
     11. [Формат JSON, метод toJSON](https://learn.javascript.ru/json) (OPTIONAL)
 6.  ### [Продвинутая работа с функциями](https://learn.javascript.ru/advanced-functions)
