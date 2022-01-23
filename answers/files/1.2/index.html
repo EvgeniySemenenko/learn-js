@@ -3,17 +3,13 @@
 <meta charset="UTF-8">
 <body>
 <script>
-const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
-function deleteFruit(fruitTwo, fruitElement) {
-    fruitElement = 'Pineapple';
-    fruitTwo = fruit.filter((elem, index) => {
-        return Math.abs(fruit.indexOf(fruitElement) - index) > 1
-    } )
+let accum = [];
+let item = 2;
+let elem = accum[item];
 
-    console.log(fruitTwo);
-};
-deleteFruit();
-
+accum[item] = accum[item] ? accum[item] + 1 : accum[item] = 1;
+console.log(accum[item]);
+console.log(accum);
 </script>
 </body>
 </html>
