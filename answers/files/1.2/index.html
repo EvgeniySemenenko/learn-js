@@ -3,17 +3,16 @@
 <meta charset="UTF-8">
 <body>
 <script>
+const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+function deleteFruit(fruitTwo, fruitElement) {
+    fruitElement = 'Pineapple';
+    fruitTwo = fruit.filter((elem, index) => {
+        return Math.abs(fruit.indexOf(fruitElement) - index) > 1
+    } )
 
-const user = {
-    firstName: 'John',
-    profile: {
-        age:
-    },
+    console.log(fruitTwo);
 };
-let {firstName: name, profile: {age = null}} = user;
-console.log(name);
-console.log(age);
-
+deleteFruit();
 
 </script>
 </body>
