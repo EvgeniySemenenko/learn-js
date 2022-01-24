@@ -4,34 +4,90 @@
 <body>
 <script>
 
-function slow(x) {
-    // здесь могут быть ресурсоёмкие вычисления
-    console.log(`Called with ${x}`);
-    return x;
+/////////////////////P  U  R  E______H  O  M  E  W  O  R  K////////////////////
+let someObject = {
+    multiplier: 1,
+}
+function someFunction(num) {
+
+    console.log(this.multiplier * num);
 }
 
-function cachingDecorator(func) {
-    let cache = new Map();
+someFunction.call(someObject, 10);
 
-    return function(x) {
-        if (cache.has(x)) {    // если кеш содержит такой x,
-            return cache.get(x); // читаем из него результат
-        }
+///////////////////////////////////////////////////////
+    // let num;
+// function someFunction(num) {
+//     console.log(this.multiplier * num);
+//     return num;
+// }
+// function cachingDecoretor(func) {
+//     let cache = new Map();
+//     this.multiplier = num;
+//     return function(num) {
+//         if (cache.has(num)) {
+//             return cache.get(num);
+//         }
+//         let result = func(num);
+//
+//         cache.set(num, result);
+//         return result;
+//     }
+// }
+// someFunction = cachingDecoretor(someFunction);
+//
+// someFunction(10);
+///////////////////////////////////////  C  A  C  H  E  ////////////////////////////
+// function slow(x) {
+//     здесь могут быть ресурсоёмкие вычисления
+    // console.log(`Called with ${x}`);
+    // return x;
+// }
+// function cachingDecorator(func) {
+//     let cache = new Map();
+//     return function(x) {
+//     if (cache.has(x)) {
+//         console.log(`Call is ok`);
+//         return cache.get(x);
+//     }
+//     let result = func(x);
+//     cache.set(x, result);
+//     console.log(`Result = ${result}`);
+    // return result;
+    //
+    // };
+// }
+// slow = cachingDecorator(slow);
+// slow(2);
+// slow(2);
+// console.log(slow(23));
 
-        let result = func(x); // иначе, вызываем функцию
+//////////////////////////////////////////////////////////////////
 
-        cache.set(x, result); // и кешируем (запоминаем) результат
-        return result;
-    };
-}
-
-slow = cachingDecorator(slow);
-
-console.log( slow(1) ); // slow(1) кешируем
-console.log( "Again: " + slow(1) ); // возвращаем из кеша
-
-console.log( slow(2) ); // slow(2) кешируем
-console.log( "Again: " + slow(2) ); // возвращаем из кеша
+    // let worker = {
+    //     someMethod() {
+    //         return 1;
+    //     },
+    //
+    //     slow(x) {
+    //         alert("Called with " + x);
+    //         return x * this.someMethod(); // (*)
+    //     }
+    // };
+    //
+    // function cachingDecorator(func) {
+    //     let cache = new Map();
+    //     return function(x) {
+    //         if (cache.has(x)) {
+    //             return cache.get(x);
+    //         }
+    //         let result = func.call(this, x); // теперь 'this' передаётся правильно
+    //         cache.set(x, result);
+    //         return result;
+    //     };
+    // }
+    //
+    // worker.slow = cachingDecorator(worker.slow);
 
 </script>
 </body>
