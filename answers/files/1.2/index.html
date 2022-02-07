@@ -4,90 +4,79 @@
 <body>
 <script>
 
-/////////////////////P  U  R  E______H  O  M  E  W  O  R  K////////////////////
-let someObject = {
-    multiplier: 1,
-}
-function someFunction(num) {
 
-    console.log(this.multiplier * num);
-}
 
-someFunction.call(someObject, 10);
 
-///////////////////////////////////////////////////////
-    // let num;
-// function someFunction(num) {
-//     console.log(this.multiplier * num);
-//     return num;
+
+
+
+
+
+
+
+// let [firstName, surname] = "Ilya Kantor".split(' ');
+// console.log(firstName);
+// console.log(surname);
+
+// let salaries = {
+//     "John": 150,
+//     "Pete": 250,
+//     "Mary": 500
+// };
+// let sumSalaries = function (obj) {
+//     let tempArr = Object.values(obj);
+//     console.log(tempArr);
+//     return tempArr.reduce((sum, item) => sum + item, 0);
 // }
-// function cachingDecoretor(func) {
-//     let cache = new Map();
-//     this.multiplier = num;
-//     return function(num) {
-//         if (cache.has(num)) {
-//             return cache.get(num);
-//         }
-//         let result = func(num);
 //
-//         cache.set(num, result);
-//         return result;
-//     }
-// }
-// someFunction = cachingDecoretor(someFunction);
+// console.log(sumSalaries(salaries)); // 650
+
+
+    // let someObject = {
+//     multiplier: 1,
+// };
+// (new.target) // если вызвано конструктором, то возвращает функцию, иначе - undefined
+
+// function sum (...args) {
+//     return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
+// };
+// let argArr = [1, 2, 3, 4, 5];
+// console.log(sum.apply(someObject, argArr));
 //
-// someFunction(10);
-///////////////////////////////////////  C  A  C  H  E  ////////////////////////////
-// function slow(x) {
-//     здесь могут быть ресурсоёмкие вычисления
-    // console.log(`Called with ${x}`);
-    // return x;
-// }
-// function cachingDecorator(func) {
-//     let cache = new Map();
-//     return function(x) {
-//     if (cache.has(x)) {
-//         console.log(`Call is ok`);
-//         return cache.get(x);
-//     }
-//     let result = func(x);
-//     cache.set(x, result);
-//     console.log(`Result = ${result}`);
-    // return result;
-    //
-    // };
-// }
-// slow = cachingDecorator(slow);
-// slow(2);
-// slow(2);
-// console.log(slow(23));
+// function SomeFunction (argArr) {
+//     console.log(argArr);
+//     let finalArgs = argArr.push(100);
+    // console.log(argArr.splice(-1,0,0,8));
+    // return sum(argArr);
+// };
+//
+// SomeFunction(argArr);
+//
+// console.log(SomeFunction(argArr));
 
-//////////////////////////////////////////////////////////////////
 
-    // let worker = {
-    //     someMethod() {
-    //         return 1;
-    //     },
-    //
-    //     slow(x) {
-    //         alert("Called with " + x);
-    //         return x * this.someMethod(); // (*)
-    //     }
-    // };
-    //
-    // function cachingDecorator(func) {
-    //     let cache = new Map();
-    //     return function(x) {
-    //         if (cache.has(x)) {
-    //             return cache.get(x);
-    //         }
-    //         let result = func.call(this, x); // теперь 'this' передаётся правильно
-    //         cache.set(x, result);
-    //         return result;
-    //     };
-    // }
-    //
-    // worker.slow = cachingDecorator(worker.slow);
+
+
+
+
+// const someFunction = new SomeFunction();
+// const result = someFunction.sum(1, 2, 3, 4, 5);
+
+// console.log(result);
+
+
+// function sum (...args) {
+//     return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
+// }
+//
+// function SomeFunction() {
+// }
+//
+// const someFunction = new SomeFunction();
+// const result = someFunction.sum(1, 2, 3);
+//
+// console.log(result);
+
 
 </script>
 </body>
