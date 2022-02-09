@@ -4,10 +4,17 @@
 <body>
 <script>
 
-    const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
-    let newVariable = fruit[fruit.length - 1];
-    console.log(newVariable);
-    console.log(fruit);
+const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+function deleteFruit(fruitTwo, fruitElement) {
+    fruitElement = 'Apple';
+    fruitTwo = fruit.filter((elem, index) => {
+        console.log(Math.abs(fruit.indexOf(fruitElement) - index) > 1);
+        return Math.abs(fruit.indexOf(fruitElement) - index) > 1
+    } )
+
+    console.log(fruitTwo);
+};
+// console.log(deleteFruit());
 
 
 
