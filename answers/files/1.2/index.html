@@ -4,20 +4,13 @@
 <body>
 <script>
 
-const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
-function deleteFruit(fruitTwo, fruitElement) {
-    fruitElement = 'Apple';
-    fruitTwo = fruit.filter((elem, index) => {
-        console.log(Math.abs(fruit.indexOf(fruitElement) - index) > 1);
-        return Math.abs(fruit.indexOf(fruitElement) - index) > 1
-    } )
+let accum = [1, 2, 3, 4, 5];
+let item = 2;
+let elem = accum[item];
 
-    console.log(fruitTwo);
-};
-// console.log(deleteFruit());
+accum[item] = accum[item] + 1 || 1;
 
-
-
+console.log(accum[item]);
 </script>
 </body>
 </html>
