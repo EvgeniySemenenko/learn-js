@@ -4,31 +4,10 @@
 <body>
 <script>
 
-const fruitsCount = {
-    pineapple: 2,
-    apple: 4,
-    orange: 3,
-    plum: 1
-};
-let arr = Object.entries(fruitsCount);
-
-let str = '';
-
-arr.map((item, index) => {
-    str += `; ${item.join(': ')}`;
-});
-str = str.slice(2);
-console.log(str);
-
-//     item.join(':') + '; ' + prev), '');
-//
-// let finalString = temporaryString.slice(0, -2 );
-//
-// console.log(finalString);
-
-
-
-
+    const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+    let newVariable = fruit[fruit.length - 1];
+    console.log(newVariable);
+    console.log(fruit);
 
 
 
