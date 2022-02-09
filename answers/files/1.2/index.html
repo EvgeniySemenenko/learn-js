@@ -4,87 +4,32 @@
 <body>
 <script>
 
-    const fruit = 'pineapple apple orange orange apple plum orange apple pineapple apple';
+const fruitsCount = {
+    pineapple: 2,
+    apple: 4,
+    orange: 3,
+    plum: 1
+};
+let arr = Object.entries(fruitsCount);
 
-    let fruits = fruit.split(` `);
+let str = '';
 
-    let list = fruits.reduce((acc, fruit) => {
-        const temporaryValue = acc[fruit] || 0;
-        acc[fruit] = temporaryValue + 1;
-        return acc
-    }, {});
+arr.map((item, index) => {
+    str += `; ${item.join(': ')}`;
+});
+str = str.slice(2);
+console.log(str);
 
-    console.log(list);
-
-
-
-
-
-
-
-
-// let [firstName, surname] = "Ilya Kantor".split(' ');
-// console.log(firstName);
-// console.log(surname);
-
-// let salaries = {
-//     "John": 150,
-//     "Pete": 250,
-//     "Mary": 500
-// };
-// let sumSalaries = function (obj) {
-//     let tempArr = Object.values(obj);
-//     console.log(tempArr);
-//     return tempArr.reduce((sum, item) => sum + item, 0);
-// }
+//     item.join(':') + '; ' + prev), '');
 //
-// console.log(sumSalaries(salaries)); // 650
-
-
-    // let someObject = {
-//     multiplier: 1,
-// };
-// (new.target) // если вызвано конструктором, то возвращает функцию, иначе - undefined
-
-// function sum (...args) {
-//     return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
-// };
-// let argArr = [1, 2, 3, 4, 5];
-// console.log(sum.apply(someObject, argArr));
+// let finalString = temporaryString.slice(0, -2 );
 //
-// function SomeFunction (argArr) {
-//     console.log(argArr);
-//     let finalArgs = argArr.push(100);
-    // console.log(argArr.splice(-1,0,0,8));
-    // return sum(argArr);
-// };
-//
-// SomeFunction(argArr);
-//
-// console.log(SomeFunction(argArr));
+// console.log(finalString);
 
 
 
 
 
-
-// const someFunction = new SomeFunction();
-// const result = someFunction.sum(1, 2, 3, 4, 5);
-
-// console.log(result);
-
-
-// function sum (...args) {
-//     return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
-// }
-//
-// function SomeFunction() {
-// }
-//
-// const someFunction = new SomeFunction();
-// const result = someFunction.sum(1, 2, 3);
-//
-// console.log(result);
 
 
 </script>
