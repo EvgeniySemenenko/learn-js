@@ -4,13 +4,37 @@
 <body>
 <script>
 
-let accum = [1, 2, 3, 4, 5];
-let item = 2;
-let elem = accum[item];
+    // // функция-конструктор возвращает новый объект
+    // function User(name) {
+    //
+    //     // методом объекта становится вложенная функция
+    //     this.sayHi = function() {
+    //         alert(name);
+    //     };
+    // }
+    //
+    // let user = new User("John");
+    // user.sayHi(); // у кода метода "sayHi" есть доступ к внешней переменной "name"
 
-accum[item] = accum[item] + 1 || 1;
 
-console.log(accum[item]);
+function sum (...args) {
+    console.log(args);
+    return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
+}
+
+function SomeFunction() {
+    this.sum = function () {
+        let res = sum.call({multiplier: 5}, 100, ...arguments);
+        return res;
+    }
+}
+const someFunction = new SomeFunction();
+const result = someFunction.sum(1, 2, 3);
+
+console.log(result);
+
+
+
 </script>
 </body>
 </html>
