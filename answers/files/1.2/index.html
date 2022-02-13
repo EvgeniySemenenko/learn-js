@@ -4,28 +4,17 @@
 <body>
 <script>
 
-// class User {
-//   constructor() {
-//   this.firstName = 'John';
-//   this.lastName = 'Smith';
-//   }
-//     getFullName = function () {
-//   return this.firstName + ' ' + this.lastName;
-//   }
-// }
 class User {
-    firstName = 'John';
-    lastName = 'Smith';
-    fullName = this.firstName + ' ' + this.lastName
-};
+    firstName = 'empty'
+    setFirstName(name) {
+        this.firstName = name;
+        return this.firstName;
+    }
+    }
 
 const user = new User();
-console.log(user.fullName);
-
-
-
-
-
+user.setFirstName('John');
+console.log(user.firstName);
 
 
 
