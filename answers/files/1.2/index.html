@@ -24,16 +24,16 @@ function sum (...args) {
 
 function SomeFunction() {
     this.sum = function () {
-        let res = sum.call({multiplier: 5}, 100, ...arguments);
+        let res = sum.call(this, 100, ...arguments);
         return res;
-    }
+    };
 }
-const someFunction = new SomeFunction();
+
+const someFunction = new SomeFunction()
+    someFunction.multiplier = 10;
 const result = someFunction.sum(1, 2, 3);
 
 console.log(result);
-
-
 
 </script>
 </body>
