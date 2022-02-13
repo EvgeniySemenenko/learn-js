@@ -21,16 +21,16 @@ function sum (...args) {
     console.log(args);
     return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
 }
+let sum2 = sum.bind({multiplier: 5});
 
 function SomeFunction() {
     this.sum = function () {
-        let res = sum.call(this, 100, ...arguments);
+        let res = sum2.call(this, 100, ...arguments);
         return res;
     };
 }
 
 const someFunction = new SomeFunction()
-    someFunction.multiplier = 10;
 const result = someFunction.sum(1, 2, 3);
 
 console.log(result);
