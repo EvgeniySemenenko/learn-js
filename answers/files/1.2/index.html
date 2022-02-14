@@ -4,31 +4,24 @@
 <body>
 <script>
 
-
-
-// function makeWorker() {
-//     let name = "Pete";
-//
-//     return function() {
-//         console.log(name);
-//     };
-// }
-//
-// let name = "John";
-//
-// // create a function
-// let work = makeWorker();
-//
-// // call it
-// work(); // что будет показано? "Pete" (из места создания) или "John" (из места выполнения)
-
-
-
 function sum (...args) {
     console.log(args);
     return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
-}
-let sum2 = sum.bind({multiplier: 5});
+};
+function SomeFunction() {
+    this.sum = function () {
+        this.multiplier = this.multiplier ? this.multiplier: 1;
+        return sum.call(this, 100, ...arguments);
+    };
+};
+
+const someFunction = new SomeFunction();
+someFunction.multiplier = 12;
+const result = someFunction.sum(1, 2, 3);
+
+console.log(result);
+
+
 
 
 
