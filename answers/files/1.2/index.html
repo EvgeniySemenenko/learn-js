@@ -4,16 +4,79 @@
 <body>
 <script>
 
-class User {
-    name = 'John';
-    user() {
-        return new User()
-    }
-}
+// class User {
+//
+//     constructor(name) {
+//         вызывает сеттер
+//         this.name = name;
+//     }
+//
+//     get name() {
+//         return this._name;
+//     }
+//
+//     set name(value) {
+//         if (value.length < 4) {
+//             console.log("Имя слишком короткое.");
+//             return;
+//         }
+//         this._name = value;
+//     }
+//
+// }
+//
+// let user = new User("Иван");
+// console.log(user.name); // Иван
+//
+// user = new User(""); // Имя слишком короткое.
 
-const user = new User();
-const name = user.user().user().user().user().user().user().name;
-console.log(name);
+
+class User {
+    constructor(namePrefix = ''){
+        this.namePrefix = namePrefix;
+    }
+
+    set firstName(name) {
+        this._name = name}
+
+    get firstName() {
+        return (this.namePrefix + this._name)
+    }
+   }
+const firstUser = new User();
+firstUser.firstName = 'John';
+console.log(firstUser.firstName);
+
+const secondUser = new User('Mr.');
+secondUser.firstName = 'John';
+console.log(secondUser.firstName);
+
+
+
+
+
+
+
+
+
+
+// class User{
+// constructor(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// };
+// getInfo() {
+//     return
+// }
+// }
+//
+// let user = new User('Mike', 'Anderson');
+//     console.log(user);
+
+
+
+// const student = new Student('John', 'Smith', 2020);
+// console.log(student.getInfo());
 
 
 
