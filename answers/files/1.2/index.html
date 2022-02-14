@@ -5,16 +5,15 @@
 <script>
 
 class User {
-    firstName = 'empty'
-    setFirstName(name) {
-        this.firstName = name;
-        return this.firstName;
+    name = 'John';
+    user() {
+        return new User()
     }
-    }
+}
 
 const user = new User();
-user.setFirstName('John');
-console.log(user.firstName);
+const name = user.user().user().user().user().user().user().name;
+console.log(name);
 
 
 
