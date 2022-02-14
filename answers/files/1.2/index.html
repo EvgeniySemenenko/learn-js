@@ -4,79 +4,49 @@
 <body>
 <script>
 
-// class User {
+
+
+// function makeWorker() {
+//     let name = "Pete";
 //
-//     constructor(name) {
-//         вызывает сеттер
-//         this.name = name;
-//     }
-//
-//     get name() {
-//         return this._name;
-//     }
-//
-//     set name(value) {
-//         if (value.length < 4) {
-//             console.log("Имя слишком короткое.");
-//             return;
-//         }
-//         this._name = value;
-//     }
-//
+//     return function() {
+//         console.log(name);
+//     };
 // }
 //
-// let user = new User("Иван");
-// console.log(user.name); // Иван
+// let name = "John";
 //
-// user = new User(""); // Имя слишком короткое.
-
-
-class User {
-    constructor(namePrefix = ''){
-        this.namePrefix = namePrefix;
-    }
-
-    set firstName(name) {
-        this._name = name}
-
-    get firstName() {
-        return (this.namePrefix + this._name)
-    }
-   }
-const firstUser = new User();
-firstUser.firstName = 'John';
-console.log(firstUser.firstName);
-
-const secondUser = new User('Mr.');
-secondUser.firstName = 'John';
-console.log(secondUser.firstName);
-
-
-
-
-
-
-
-
-
-
-// class User{
-// constructor(firstName, lastName) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-// };
-// getInfo() {
-//     return
-// }
-// }
+// // create a function
+// let work = makeWorker();
 //
-// let user = new User('Mike', 'Anderson');
-//     console.log(user);
+// // call it
+// work(); // что будет показано? "Pete" (из места создания) или "John" (из места выполнения)
 
 
 
-// const student = new Student('John', 'Smith', 2020);
-// console.log(student.getInfo());
+function sum (...args) {
+    console.log(args);
+    return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
+}
+let sum2 = sum.bind({multiplier: 5});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
