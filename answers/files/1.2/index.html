@@ -4,22 +4,21 @@
 <body>
 <script>
 
-function sum (...args) {
-    console.log(args);
-    return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
+const fruitsCount = {
+    pineapple: 2,
+    apple: 4,
+    orange: 3,
+    plum: 1
 };
-function SomeFunction() {
-    this.sum = function () {
-        this.multiplier = this.multiplier ? this.multiplier: 1;
-        return sum.call(this, 100, ...arguments);
-    };
-};
+let arr = Object.entries(fruitsCount);
+let reduceArr = arr.reduce((acc, item, index) => {
+    if (index !== arr.length - 1) {
+        return acc + item.join(': ') + '; ';
+    }; return acc + item.join(': ');
+}, []);
 
-const someFunction = new SomeFunction();
-someFunction.multiplier = 12;
-const result = someFunction.sum(1, 2, 3);
+console.log(reduceArr);
 
-console.log(result);
 
 
 
