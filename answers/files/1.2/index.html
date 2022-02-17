@@ -7,15 +7,26 @@
 
 
 
-function lastElementOfArr (arr = []) {
-    let [...revFruit] = fruit.slice().reverse();
-    return revFruit[0];
+class User {
+    constructor(namePrefix = ''){
+        this.namePrefix = namePrefix;
+    };
+
+    set firstName(name) {
+        this._name = name;
+    };
+
+    get firstName() {
+        return (this.namePrefix + ' ' + this._name).trim();
+    };
 }
+const firstUser = new User();
+firstUser.firstName = 'John';
+console.log(firstUser.firstName);
 
-const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
-
-console.log(lastElementOfArr(fruit));
-console.log(fruit);
+const secondUser = new User('Mr.');
+secondUser.firstName = 'John';
+console.log(secondUser.firstName);
 
 
 // let newVariable = fruit[fruit.length - 1];
