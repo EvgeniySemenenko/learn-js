@@ -11,28 +11,16 @@
 
 
 
-function sum (...args) {
-    console.log(args);
-    return args.reduce((acc, num) => acc + num, 0) * this.multiplier;
-}
+const fruitsCount = {
+    pineapple: 2,
+    apple: 4,
+    orange: 3,
+    plum: 1
+};
 
-function SomeFunction() {
-    this.multiplier = 5;
-    this.sum = function () {
-        this.multiplier = this.multiplier || 1;
-        return sum.call(this, 100, ...arguments);
-    };
-}
+let str = Object.entries(fruitsCount).map((item) => (item.join(': '))).join('; ');
 
-const someFunction = new SomeFunction();
-console.log('222', someFunction.multiplier) /// 5
-someFunction.multiplier = 10;
-console.log('444', someFunction.multiplier) /// 10
-
-const result = someFunction.sum(1, 2, 3);
-
-console.log(result);
-
+console.log(str);
 
 
 
