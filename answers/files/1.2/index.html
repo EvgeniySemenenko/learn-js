@@ -7,21 +7,20 @@
 
 
 
+function lastElementOfArr (arr = []) {
+    let [...revFruit] = fruit.slice().reverse();
+    return revFruit[0];
+}
+
+const fruit = ['Apple', 'Orange', 'Plum', 'Pineapple'];
+
+console.log(lastElementOfArr(fruit));
+console.log(fruit);
 
 
-
-
-const fruitsCount = {
-    pineapple: 2,
-    apple: 4,
-    orange: 3,
-    plum: 1
-};
-
-let str = Object.entries(fruitsCount).map((item) => (item.join(': '))).join('; ');
-
-console.log(str);
-
+// let newVariable = fruit[fruit.length - 1];
+// console.log(newVariable);
+// console.log(fruit);
 
 
 
