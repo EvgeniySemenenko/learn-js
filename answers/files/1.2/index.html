@@ -7,16 +7,26 @@
 
 
 class User {
-    _firstName;
+    _firstName = 'John';
+    _lastName = 'Smith';
 
-    constructor(firstName) {
+    set firstName(firstName){
+        console.log('firstName setter', firstName);
         this._firstName = firstName;
     };
+    set lastName(lastName) {
+        console.log('lastName setter', lastName);
+        this._lastName = lastName;
+    };
+    get fullName () {
+        return this._firstName + ' ' + this._lastName;
 
-    set firstName (firstMame) {
-        this._firstName = firstMame;
     };
 };
+
+const user = new User();
+user.firstName = 'Bob'
+console.log(user.fullName);
 
 
 
