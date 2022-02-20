@@ -6,49 +6,25 @@
 
 
 
+class Chameleon {
+    constructor({ newColor = "green" } = {}) {
+        this.newColor = newColor;
+    }
 
-class User {
-    constructor(namePrefix = ''){
-        this.namePrefix = namePrefix;
-    };
+    static colorChange(newColor) {
+        this.newColor = newColor;
+    }
 
-    set firstName(name) {
-        this._name = name;
-    };
-
-    get firstName() {
-        return (this.namePrefix + ' ' + this._name).trim();
-    };
+    getColor() {
+        return this.newColor;
+    }
 }
-const firstUser = new User();
-firstUser.firstName = 'John';
-console.log(firstUser.firstName);
 
-const secondUser = new User('Mr.');
-secondUser.firstName = 'John';
-console.log(secondUser.firstName);
-
-
-// let newVariable = fruit[fruit.length - 1];
-// console.log(newVariable);
-// console.log(fruit);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const freddie = new Chameleon({ newColor: "purple" });
+console.log(freddie);
+// freddie.colorChange("orange");
+const color = freddie.getColor();
+console.log(color);
 
 
 
