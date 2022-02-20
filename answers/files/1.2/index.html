@@ -5,20 +5,19 @@
 <script>
 
 
+function task(callback) {
+    setTimeout(() => {
+        console.log('Task completed');
+        callback();
+    }, 2000);
 
-    class User {
-        name = 'John';
-        user() {
-            return new User()
-        }
-    }
+};
 
-    const user = new User();
-    user.name = 'test';
-    console.log(user.user());
-    const name = user.user().user().user().user().user().user().name;
-    console.log(name);
-
+function onCompleted() {
+    console.log('All tasks completed')
+}
+let callback = onCompleted;
+task(callback);
 
 
 </script>
