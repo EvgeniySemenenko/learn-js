@@ -6,27 +6,18 @@
 
 
 
-class User {
-    _firstName = 'John';
-    _lastName = 'Smith';
+    class User {
+        name = 'John';
+        user() {
+            return new User()
+        }
+    }
 
-    set firstName(firstName){
-        console.log('firstName setter', firstName);
-        this._firstName = firstName;
-    };
-    set lastName(lastName) {
-        console.log('lastName setter', lastName);
-        this._lastName = lastName;
-    };
-    get fullName () {
-        return this._firstName + ' ' + this._lastName;
-
-    };
-};
-
-const user = new User();
-user.firstName = 'Bob'
-console.log(user.fullName);
+    const user = new User();
+    user.name = 'test';
+    console.log(user.user());
+    const name = user.user().user().user().user().user().user().name;
+    console.log(name);
 
 
 
