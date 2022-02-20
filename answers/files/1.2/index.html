@@ -6,27 +6,19 @@
 
 
 
-class Chameleon {
-    constructor({ newColor = "green" } = {}) {
-        this.newColor = newColor;
-    }
-
-    static colorChange(newColor) {
-        this.newColor = newColor;
-    }
-
-    getColor() {
-        return this.newColor;
-    }
-}
-
-const freddie = new Chameleon({ newColor: "purple" });
-console.log(freddie);
-// freddie.colorChange("orange");
-const color = freddie.getColor();
-console.log(color);
 
 
+
+class User {
+    _firstName;
+
+    constructor(firstName) {
+        this._firstName = firstName;
+    };
+    get firstName() {
+        return this._firstName;
+    };
+};
 
 
 
