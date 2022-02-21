@@ -3,49 +3,11 @@
 <meta charset="UTF-8">
 <body>
 <script>
-
-    // new Promise(function(resolve, reject) {
-    //
-    //     setTimeout(() => resolve(1), 1000); // (*)
-    //
-    // }).then(function(result) { // (**)
-    //
-    //     console.log(result); // 1
-    //     return result * 2;
-    //
-    // }).then(function(result) { // (***)
-    //
-    //     console.log(result); // 2
-    //     return result * 2;
-    //
-    // }).then(function(result) {
-    //
-    //     console.log(result); // 4
-    //     return result * 2;
-    //
-    // });
-    //
-
- let x = new Promise(function(resolve) {
-    firstTask();
-    function firstTask() {
-        setTimeout(() => {
-            const valueFromFirstTask = 5;
-            console.log('firstTask', valueFromFirstTask);
-            resolve(valueFromFirstTask);
-        }, 2000);
-    };
-}).then(function secondTask(valueFromFirstTask) {
-    setTimeout(() => {
-        const result = valueFromFirstTask * 10;
-        console.log('from function', result);
-        return result;
-    }, 2000);
-}).then(function showResult(result) {
-        console.log('outside', result);
-    });
-
-
+Promise.all([
+    new Promise(resolve => setTimeout(() => resolve({id: 1}), 2000)),
+    new Promise(resolve => setTimeout(() => resolve({id: 2}), 3000)),
+    new Promise(resolve => setTimeout(() => resolve({id: 3}), 1000)),
+]).then((value) => console.log(value));
 </script>
 </body>
 </html>
