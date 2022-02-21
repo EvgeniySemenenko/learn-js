@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <body>
 <script>
-Promise.all([
+Promise.allSettled([
     new Promise(resolve => setTimeout(() => resolve({id: 1}), 2000)),
     new Promise(resolve => setTimeout(() => resolve({id: 2}), 3000)),
     new Promise(resolve => setTimeout(() => resolve({id: 3}), 1000)),
