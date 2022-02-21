@@ -5,19 +5,19 @@
 <script>
 
 
-function task(callback) {
+function firstTask() {
+    new Promise((resolve, reject) => {
     setTimeout(() => {
-        console.log('Task completed');
-        callback();
-    }, 2000);
-
+        if(Math.random() > 0.5) {
+            resolve(console.log('First task completed'));
+        } else {
+            reject(console.log('Error'));
+        };
+    }, 1000);
+    });
 };
+firstTask();
 
-function onCompleted() {
-    console.log('All tasks completed')
-}
-let callback = onCompleted;
-task(callback);
 
 
 </script>
